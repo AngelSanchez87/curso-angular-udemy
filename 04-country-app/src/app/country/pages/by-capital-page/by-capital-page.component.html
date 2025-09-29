@@ -1,0 +1,21 @@
+<!-- <country-search-input placeholder="Buscar por capital de mi pais..." (value)="onSearch($event)" /> -->
+<country-search-input placeholder="Buscar por capital de mi pais..." (value)="query.set($event)" />
+
+<country-list
+[countries]="countryResource.value() ?? []"
+[errorMessage]="countryResource.error()"
+[isEmpty]="countryResource.value()?.length === 0"
+[isLoading]="countryResource.isLoading()"
+/>
+
+<!-- @if (countryResource.error()) {
+  <h3>{{ countryResource.error() }}</h3>
+} @if ( countryResource.hasValue()) {
+  <country-list [countries]="countryResource.value()!" />
+} -->
+
+<!-- @if (isError()) {
+  <h3>{{ isError() }}</h3>
+} @else {
+  <country-list [countries]="this.countries()" />
+} -->
