@@ -1,5 +1,5 @@
 <!-- <country-search-input placeholder="Buscar por capital de mi pais..." (value)="onSearch($event)" /> -->
-<country-search-input placeholder="Buscar por capital de mi pais..." (value)="query.set($event)" />
+<country-search-input placeholder="Buscar por capital de mi pais..." (value)="query.set($event)" [initialValue]="query()" />
 
 <country-list
 [countries]="countryResource.value() ?? []"
