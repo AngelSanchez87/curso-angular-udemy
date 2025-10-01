@@ -22,3 +22,56 @@
     <div class="stat-desc">{{fullName()}}</div>
   </div>
 </div>
+
+<div class="divider"></div>
+
+<div class="stats stats-vertical lg:stats-horizontal shadow W-full">
+  <div class="stat">
+    <div class="stat-title">Date pipe</div>
+    <div class="stat-value">{{customDate() | date}}</div>
+    <div class="stat-desc">{{customDate()}}</div>
+  </div>
+
+  <div class="stat">
+    <div class="stat-title">Date: short gmt+2</div>
+    <div class="stat-value">{{customDate() | date : 'short' : 'gmt+2'}}</div>
+    <div class="stat-desc">{{customDate()}}</div>
+  </div>
+
+  <div class="stat">
+    <div class="stat-title">Date: 'yyyy MM'</div>
+    <div class="stat-value">{{customDate() | date: 'yyyy MM'}}</div>
+    <div class="stat-desc">{{customDate()}}</div>
+  </div>
+</div>
+
+<div class="stats stats-vertical lg:stats-horizontal shadow W-full">
+
+  <div class="stat">
+    <div class="stat-title">Date: 'dd/MM/yyyy'</div>
+    <div class="stat-value">{{customDate() | date : 'dd/MM/yyyy' : 'gmt+2'}}</div>
+    <div class="stat-desc">{{customDate()}}</div>
+  </div>
+
+  <div class="stat">
+    <div class="stat-title">Date: 'HH:mm:ss'</div>
+    <div class="stat-value">{{customDate() | date : 'HH:mm:ss' : 'gmt+2'}}</div>
+    <div class="stat-desc">{{customDate()}}</div>
+  </div>
+
+  <div class="stat">
+    <div class="stat-title">Date: 'EEEE d, MMMM'</div>
+    <div class="stat-value">{{customDate() | date : 'EEEE d, MMMM' : 'gmt+2'}}</div>
+    <div class="stat-desc">{{customDate()}}</div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<div class="flex flex-row gap-2">
+  <h1 class="text-2xl font-bold">Locale actual: <span class="badge badge-secondary">ES</span></h1>
+
+  <button class="btn btn-primary">Change to french</button>
+  <button class="btn btn-primary">Change to english</button>
+  <button class="btn btn-primary">Change to spanish</button>
+</div>
