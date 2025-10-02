@@ -69,9 +69,9 @@
 <div class="divider"></div>
 
 <div class="flex flex-row gap-2">
-  <h1 class="text-2xl font-bold">Locale actual: <span class="badge badge-secondary">ES</span></h1>
+  <h1 class="text-2xl font-bold">Locale actual: <span class="badge badge-secondary">{{localeService.getLocale}}</span></h1>
 
-  <button class="btn btn-primary">Change to french</button>
-  <button class="btn btn-primary">Change to english</button>
-  <button class="btn btn-primary">Change to spanish</button>
+  <button class="btn btn-primary" (click)="changeLocal('fr')">Change to french</button>
+  <button class="btn btn-primary" (click)="changeLocal('en')">Change to english</button>
+  <button class="btn btn-primary" (click)="changeLocal('es')">Change to spanish</button>
 </div>
