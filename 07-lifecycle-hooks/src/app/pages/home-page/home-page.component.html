@@ -1,0 +1,15 @@
+<h1>Home Page</h1>
+<hr />
+
+<h3>Propiedad Tradicional: {{ traditionalProperty }}</h3>
+<h3>Propiedad Reactiva (Signal): {{ reactiveProperty() }}</h3>
+
+<button (click)="traditionalProperty = 'Angel Sánchez Ruiz'">
+  Cambiar Propiedad Tradicional
+</button>
+
+<button (click)="reactiveProperty.set('Angel Sánchez Ruiz')">
+  Cambiar Propiedad Reactiva
+</button>
+
+<app-title [title]="traditionalProperty"></app-title>
