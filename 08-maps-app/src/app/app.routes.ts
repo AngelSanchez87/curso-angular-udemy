@@ -1,0 +1,26 @@
+import { Routes } from '@angular/router';
+import { FullscreenMapPageComponent } from './pages/fullscreen-map-page/fullscreen-map-page.component';
+import { MarkersPageComponent } from './pages/markers-page/markers-page.component';
+import { HousesPageComponent } from './pages/houses-page/houses-page.component';
+
+export const routes: Routes = [
+  {
+    path: 'fullscreen',
+    component: FullscreenMapPageComponent,
+    title: 'Mapa pantalla completa'
+  },
+  {
+    path: 'markers',
+    component: MarkersPageComponent,
+    title: 'Mapa de marcadores'
+  },
+  {
+    path: 'houses',
+    component: HousesPageComponent,
+    title: 'Mapa de casas'
+  },
+  {
+    path: '**',
+    redirectTo: 'fullscreen',
+  }
+];
