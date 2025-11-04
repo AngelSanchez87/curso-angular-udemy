@@ -8,5 +8,18 @@
     </small>
   </h2>
 
-  <input #txtZoom type="range" min="1" max="19" [value]="this.zoom()" (input)="this.zoom.set(+txtZoom.value)" class="range range-secondary" />
+  <input #txtZoom type="range" min="1" max="19" [value]="this.zoom()" (input)="this.zoom.set(+txtZoom.value)"
+    class="range range-secondary" />
+
+  <h2 class="text-2x font-bold text-black mb2">
+    Coordinates
+
+    <pre class="text-gray-500 text-sm font-normal">{{
+        {
+          lng: this.coordinates().lng | number : '1.4-4',
+          lat: this.coordinates().lat | number : '1.4-4'
+        } | json
+      }}
+    </pre>
+  </h2>
 </section>
