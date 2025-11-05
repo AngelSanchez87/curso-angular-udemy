@@ -11,6 +11,9 @@
       "prefix": "app",
       "architect": {
         "build": {
+          "allowedCommonJsDependencies": [
+            "mapbox-gl"
+          ],
           "builder": "@angular-devkit/build-angular:application",
           "options": {
             "outputPath": "dist/08-maps-app",
@@ -36,8 +39,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                  "maximumWarning": "1MB",
+                  "maximumError": "3MB"
                 },
                 {
                   "type": "anyComponentStyle",
